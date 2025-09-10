@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Egypt Travel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tours.html">Tours</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero contact-hero">
+    <h1>Contact Us</h1>
+    <p>We’re here to help you plan your dream trip to Egypt.</p>
+  </header>
+
+  <!-- Contact Section -->
+  <div class="container contact-grid">
+    <!-- Contact Info -->
+    <div class="contact-card">
+      <h2>Get in Touch</h2>
+      <p><strong>Email:</strong> info@info.com</p>
+      <p><strong>Phone:</strong> +20 100 123 4567</p>
+      <p><strong>Address:</strong> 12 Nile Street, Cairo, Egypt</p>
+      <p>Follow us on social media for travel updates and offers!</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-card">
+      <h2>Send a Message</h2>
+      <form action="https://formspree.io/f/mqadwwep" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Egypt Travel Company. All Rights Reserved.
+  </footer>
+</body>
+
+</html>
