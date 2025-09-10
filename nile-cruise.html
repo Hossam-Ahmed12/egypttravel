@@ -20,71 +20,56 @@
         <h1>Nile Cruise Programs</h1>
         <p>Enjoy an unforgettable journey along the Nile, exploring temples, tombs, and the timeless beauty of Egypt. Choose from 3, 4, or 7 nights.</p>
 
-                <!-- Comparison Table -->
-        <h2>Quick Itinerary Comparison</h2>
-        <div class="itinerary-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>3 Nights (Aswan → Luxor)</th>
-                        <th>4 Nights (Luxor → Aswan)</th>
-                        <th>7 Nights (Luxor ↔ Aswan)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Day 1</td>
-                        <td>Aswan: High Dam, Philae, Unfinished Obelisk</td>
-                        <td>Luxor: Karnak & Luxor Temples</td>
-                        <td>Luxor: Karnak & Luxor Temples</td>
-                    </tr>
-                    <tr>
-                        <td>Day 2</td>
-                        <td>Kom Ombo & Edfu Temples</td>
-                        <td>Luxor West Bank: Valley of Kings, Hatshepsut, Memnon</td>
-                        <td>Luxor West Bank: Valley of Kings, Hatshepsut, Memnon</td>
-                    </tr>
-                    <tr>
-                        <td>Day 3</td>
-                        <td>Luxor East Bank: Karnak & Luxor Temples</td>
-                        <td>Edfu (Horus Temple), Kom Ombo Temple</td>
-                        <td>Edfu (Horus Temple)</td>
-                    </tr>
-                    <tr>
-                        <td>Day 4</td>
-                        <td>Luxor West Bank, Disembark</td>
-                        <td>Aswan: High Dam, Philae, Unfinished Obelisk</td>
-                        <td>Kom Ombo – Aswan</td>
-                    </tr>
-                    <tr>
-                        <td>Day 5</td>
-                        <td>-</td>
-                        <td>Aswan Disembark</td>
-                        <td>Aswan visits / Optional Nubian Village</td>
-                    </tr>
-                    <tr>
-                        <td>Day 6</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Optional Abu Simbel Excursion</td>
-                    </tr>
-                    <tr>
-                        <td>Day 7</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Sail back north, enjoy Nile scenery</td>
-                    </tr>
-                    <tr>
-                        <td>Day 8</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Return to Luxor, Disembark</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Shuffle Buttons -->
+        <div class="shuffle-buttons">
+            <button onclick="showItinerary('3')">3 Nights</button>
+            <button onclick="showItinerary('4')">4 Nights</button>
+            <button onclick="showItinerary('7')">7 Nights</button>
+            <button onclick="showItinerary('all')">Show All</button>
         </div>
 
+        <!-- Itineraries -->
+        <div id="itineraries">
+
+            <!-- 3 Nights -->
+            <div class="itinerary col-3">
+                <h2>3 Nights (Aswan → Luxor)</h2>
+                <ul>
+                    <li><strong>Day 1:</strong> Aswan: High Dam, Philae, Unfinished Obelisk</li>
+                    <li><strong>Day 2:</strong> Kom Ombo & Edfu Temples</li>
+                    <li><strong>Day 3:</strong> Luxor East Bank: Karnak & Luxor Temples</li>
+                    <li><strong>Day 4:</strong> Luxor West Bank, Disembark</li>
+                </ul>
+            </div>
+
+            <!-- 4 Nights -->
+            <div class="itinerary col-4" style="display:none;">
+                <h2>4 Nights (Luxor → Aswan)</h2>
+                <ul>
+                    <li><strong>Day 1:</strong> Luxor: Karnak & Luxor Temples</li>
+                    <li><strong>Day 2:</strong> Luxor West Bank: Valley of Kings, Hatshepsut, Memnon</li>
+                    <li><strong>Day 3:</strong> Edfu (Horus Temple), Kom Ombo Temple</li>
+                    <li><strong>Day 4:</strong> Aswan: High Dam, Philae, Unfinished Obelisk</li>
+                    <li><strong>Day 5:</strong> Aswan Disembark</li>
+                </ul>
+            </div>
+
+            <!-- 7 Nights -->
+            <div class="itinerary col-7" style="display:none;">
+                <h2>7 Nights (Luxor ↔ Aswan)</h2>
+                <ul>
+                    <li><strong>Day 1:</strong> Luxor: Karnak & Luxor Temples</li>
+                    <li><strong>Day 2:</strong> Luxor West Bank: Valley of Kings, Hatshepsut, Memnon</li>
+                    <li><strong>Day 3:</strong> Edfu (Horus Temple)</li>
+                    <li><strong>Day 4:</strong> Kom Ombo – Aswan</li>
+                    <li><strong>Day 5:</strong> Aswan visits / Optional Nubian Village</li>
+                    <li><strong>Day 6:</strong> Optional Abu Simbel Excursion</li>
+                    <li><strong>Day 7:</strong> Sail back north, enjoy Nile scenery</li>
+                    <li><strong>Day 8:</strong> Return to Luxor, Disembark</li>
+                </ul>
+            </div>
+
+        </div>
 
         <!-- Back Button -->
         <div style="text-align:center; margin: 30px 0;">
@@ -95,5 +80,17 @@
     <footer>
         &copy; 2025 Egypt Travel Company. All Rights Reserved.
     </footer>
+
+    <script>
+        function showItinerary(type) {
+            document.querySelectorAll(".itinerary").forEach(el => {
+                if (type === "all" || el.classList.contains("col-" + type)) {
+                    el.style.display = "block";
+                } else {
+                    el.style.display = "none";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
