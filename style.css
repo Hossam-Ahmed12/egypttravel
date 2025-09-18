@@ -48,6 +48,45 @@ nav ul li a {
 }
 
 
+/* Dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown button */
+.dropbtn {
+    cursor: pointer;
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    background-color: #0077b6;
+    min-width: 164px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    padding: 7px 10px;
+    display: block;
+    transition: transform 0.2s;
+}
+
+.dropdown-content a:hover {
+    transform: scale(1.05);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 /* Page Container */
 .container {
